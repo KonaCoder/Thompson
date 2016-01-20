@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Quiz</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <style>
+        .question {
+            color: darkblue;
+            background-color: darkgrey;
+            margin: 0px 5px;
+            border-radius: 10px;
+        }
+        
+        button {
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#pageHeader").css("color", "blue");
+
+            $("#question1ShowAnwser").click(function () {
+                if ($('.question1radio[value=Labradoodle]').is(':checked')) {
+                    $("#question1ShowAnwser").html("<label>RIGHT!</label>");
+                } else {
+                    $("#question1ShowAnwser").html("<label>WRONG!</label>");
+                }
+                
+                $(".question1wrong").remove();
+                $("#question1right").css("color", "red");
+                $("#question1ShowAnwser").prop("disabled", "true");
+            });
+
+            $("#question2ShowAnwser").click(function () {
+                if ($('.question2radio[value=Chocolate]').is(':checked')) {
+                    $("#question2ShowAnwser").html("<label>RIGHT!</label>");
+                } else {
+                    $("#question2ShowAnwser").html("<label>WRONG!</label>");
+                }
+
+                $(".question2wrong").remove();
+                $("#question2right").css("color", "red");
+                $("#question2ShowAnwser").prop("disabled", "true");
+            });
+
+            $("#question3ShowAnwser").click(function () {
+                if ($('.question3radio[value=No]').is(':checked')) {
+                    $("#question3ShowAnwser").html("<label>RIGHT!</label>");
+                } else {
+                    $("#question3ShowAnwser").html("<label>WRONG!</label>");
+                }
+
+                $(".question3wrong").remove();
+                $("#question3right").css("color", "red");
+                $("#question3ShowAnwser").prop("disabled", "true");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <a id="goHome" class="btn btn-primary btn-sm" href="../AppPlaygroundIndex.html">Back</a>
+
+        <h2 id="pageHeader" class="text-primary text-center">Kona Doodle - Dog Quiz</h2>
+
+        <!--Question 1-->
+        <div class="row question">
+            <div class="col-xs-12">
+                <h3>Question 1:</h3>
+            </div>
+        </div>
+        <div class="row question">
+            <div class="col-xs-12">
+                <h4>What type of dog is Kona?</h4>
+            </div>
+        </div>
+        <div id="question1" class="row">
+            <div class="col-xs-4">
+                <label class="question1wrong"><input type="radio" name="question1options" class="question1radio" value="Portuguese Water Dog">Portuguese Water Dog</label>
+            </div>
+            <div class="col-xs-4">
+                <label class="question1wrong"><input type="radio" name="question1options" class="question1radio" value="Poodle">Poodle</label>
+            </div>
+            <div class="col-xs-4">
+                <label class="question1right"><input type="radio" name="question1options" class="question1radio" value="Labradoodle">Labradoodle</label>
+            </div>
+        </div>
+        <button id="question1ShowAnwser" class="btn btn-submit btn-sm">Show Answer</button>
+
+        <div class="row question">
+            <div class="col-xs-12">
+                <h3>Question 2: </h3>
+            </div>
+        </div>
+        <div class="row question">
+            <div class="col-xs-12">
+                <h4>What color was Kona as a puppy?</h4>
+            </div>
+        </div>
+
+        <!--Question 2-->
+        <div id="question2" class="row">
+            <div class="col-xs-4">
+                <label  class="question2wrong"><input type="radio" name="question2options" class="question2radio" value="White">White</label>
+            </div>
+            <div class="col-xs-4">
+                <label  class="question2right"><input type="radio" name="question2options" class="question2radio" value="Chocolate">Chocolate</label>
+            </div>
+            <div class="col-xs-4">
+                <label  class="question2wrong"><input type="radio" name="question2options" class="question2radio" value="Parchment">Parchment</label>
+            </div>
+        </div>
+        <button id="question2ShowAnwser" class="btn btn-submit btn-sm">Show Answer</button>
+
+        <!--Question 3-->
+        <div class="row question">
+            <div class="col-xs-12">
+                <h3>Question 3:</h3>
+            </div>
+        </div>
+        <div class="row question">
+            <div class="col-xs-12">
+                <h4>Is Kona younger than Thompson?</h4>
+            </div>
+        </div>
+        <div id="question2" class="row">
+            <div class="col-xs-6">
+                <label  class="question3wrong"><input type="radio" name="question3options" class="question3radio" value="Yes">Yes</label>
+            </div>
+            <div class="col-xs-6">
+                <label  class="question3right"><input type="radio" name="question3options" class="question3radio" value="No">No</label>
+            </div>
+        </div>
+        <button id="question3ShowAnwser" class="btn btn-submit btn-sm">Show Answer</button>
+    </div>
+</body>
+</html>

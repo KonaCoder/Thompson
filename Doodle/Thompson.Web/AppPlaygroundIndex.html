@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <style>
+        li {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#pageHeader").css("color", "blue");
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <a id="goHome" class="btn btn-primary btn-sm" href="../default.html">Back</a>
+
+        <h2 id="pageHeader" class="text-primary">Thompson Doodle - App Playground</h2>
+
+        <img class="img-responsive thick-orange-border" alt="A cute apricot labradoodle playing in the snow" src="images/2015_ThompsonDecSnow_600x300.gif">
+
+        <ol>
+            <li><a id="app1" class="btn btn-info btn-sm" href="AppPlayground/quiz.html">Quiz App</a></li>
+            <li><a id="app2" class="btn btn-info btn-sm" href="AppPlayground/jQueryPlayground.html">jQuery Playground</a></li>
+        </ol>
+    </div>
+</body>
+</html>

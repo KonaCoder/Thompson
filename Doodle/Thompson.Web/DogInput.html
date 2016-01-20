@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Tell Me About Your Doodle!</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <style>
+        body {
+            background-color: darkgray;
+            color: darkgreen;
+            font-family: monospace;
+        }
+
+        #dog-info-form {
+            background-color: orange;
+        }
+
+        .pink-text {
+            color: darkviolet;
+        }
+
+        .blue-text {
+            color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="pink-text text-center">Dog Information Form</h1>
+        <form id="dog-info-form" action="/submit-dog-info">
+            <div class="row col-xs-12">
+                <input class="form-control" type="text" placeholder="dog name here" required />
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <input class="form-control" type="text" placeholder="dog name here" required />
+                </div>
+                <div class="col-xs-4">
+                    <input class="form-control" type="text" placeholder="dog parent first name here" required />
+                </div>
+                <div class="col-xs-4">
+                    <input class="form-control" type="text" placeholder="dog parent last name here" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+                </div>
+                <div class="col-xs-6">
+                    <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <label><input type="checkbox" name="personality" checked>Loving</label>
+                </div>
+                <div class="col-xs-4">
+                    <label><input type="checkbox" name="personality">Entergetic</label>
+                </div>
+                <div class="col-xs-4">
+                    <label><input type="checkbox" name="personality">Loyal</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-primary"><i class="fa fa-paper-plane"></i>Submit</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-info"><i class="fa fa-info-circle"></i> Info</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
