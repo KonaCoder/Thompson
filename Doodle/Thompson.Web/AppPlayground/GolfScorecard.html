@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Golf Scorecard</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <style>
+        label { margin-right: 10px; }
+
+        .well{
+            background-color: rgb(200, 100, 0);
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            function golfScore(par, strokes) {
+                if (strokes == 1) { return "Hole-in-one!"; }
+                else if (strokes <= par - 2) { return "Eagle"; }
+                else if (strokes == par - 1) { return "Birdie"; }
+                else if (strokes == par) { return "Par"; }
+                else if (strokes == par + 1) { return "Bogey"; }
+                else if (strokes == par + 2) { return "Double Bogey"; }
+                else if (strokes >= par + 3) { return "Go Home!"; }
+                else {
+                    return "Change Me";
+                }
+            }
+
+            // Change these values to test
+            golfScore(5, 4);
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <a id="goHome" class="btn btn-primary btn-sm" href="../AppPlaygroundIndex.html">Back</a>
+
+        <h1 class="text-primary text-center">Golf Scorecard</h1>
+        <h3 class="text-primary">Enter Stroke For Each Hole:</h3>
+        
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>Front 9 Holes</h4>
+                <div class="well" id="left-well">
+                    <label>Hole 1 - Par 3: </label><input type="text" /> <br />
+                    <label>Hole 2 - Par 2: </label><input type="text" /> <br />
+                    <label>Hole 3 - Par 5: </label><input type="text" /> <br />
+                    <label>Hole 4 - Par 3: </label><input type="text" /> <br />
+                    <label>Hole 5 - Par 2: </label><input type="text" /> <br />
+                    <label>Hole 6 - Par 2: </label><input type="text" /> <br />
+                    <label>Hole 7 - Par 4: </label><input type="text" /> <br />
+                    <label>Hole 8 - Par 2: </label><input type="text" /> <br />
+                    <label>Hole 9 - Par 6: </label><input type="text" /> <br />
+                    
+                    <button class="btn btn-default target pull-right" id="target1">Calculate</button> <br />
+                    <label>Front 9 Stroke Total = 0</label>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>Back 9 Holes</h4>
+                <div class="well" id="right-well">
+                    <label>Hole 10 - Par 3: </label><input type="text" /> <br />
+                    <label>Hole 11 - Par 3: </label><input type="text" /> <br />
+                    <label>Hole 12 - Par 2: </label><input type="text" /> <br />
+                    <label>Hole 13 - Par 1: </label><input type="text" /> <br />
+                    <label>Hole 14 - Par 5: </label><input type="text" /> <br />
+                    <label>Hole 15 - Par 2: </label><input type="text" /> <br />
+                    <label>Hole 16 - Par 4: </label><input type="text" /> <br />
+                    <label>Hole 17 - Par 3: </label><input type="text" /> <br />
+                    <label>Hole 18 - Par 2: </label><input type="text" /> <br />
+
+                    <button class="btn btn-default target pull-right" id="target1">Calculate</button> <br />
+                    <label>Back 9 Stroke Total = 0</label>
+                </div>
+            </div>
+        </div>
+        <div class="row col-xs-12">
+            <h3>Stroke Total = 0</h3>
+        </div>
+    </div>
+</body>
+</html>

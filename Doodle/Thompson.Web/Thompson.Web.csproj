@@ -67,7 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppPlaygroundIndex.html" />
+    <Content Include="AppPlayground\CardCounting.html" />
+    <Content Include="AppPlayground\GolfScorecard.html" />
     <Content Include="AppPlayground\jQueryPlayground.html" />
+    <Content Include="AppPlayground\ArrayManipulation.html" />
     <Content Include="grooming.html" />
     <Content Include="images\Collage\20151119_ThompsonFirstDay2.gif" />
     <Content Include="images\Collage\20151120_KonaAndThompson.jpg" />
