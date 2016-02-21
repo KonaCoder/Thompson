@@ -68,6 +68,8 @@
   <ItemGroup>
     <Content Include="AppPlaygroundIndex.html" />
     <Content Include="AppPlayground\CardCounting.html" />
+    <Content Include="AppPlayground\CarriePortfolio.html" />
+    <Content Include="AppPlayground\CodeMonkeySong.html" />
     <Content Include="AppPlayground\GolfScorecard.html" />
     <Content Include="AppPlayground\jQueryPlayground.html" />
     <Content Include="AppPlayground\ArrayManipulation.html" />
@@ -84,6 +86,7 @@
     <Content Include="wordCloudIndex.html" />
     <Content Include="wordcloud.png" />
     <None Include="Properties\PublishProfiles\DoodleDeploy.pubxml" />
+    <None Include="Properties\PublishProfiles\DoodleFileSystem.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

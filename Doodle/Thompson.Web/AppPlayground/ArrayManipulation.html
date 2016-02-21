@@ -37,6 +37,27 @@
                 "tails": 1,
                 "friends": ["everything!"]
             };
+
+            var myArray = [];
+            // for ([initialization]; [condition]; [final-expression])
+            for (var i = 1; i < 6; i++) {
+                myArray.push(i);
+            }
+
+            var myArr = [2, 3, 4, 5, 6];
+            var total = 0;
+            for (var i = 0; i < myArr.length; i++) {
+                total += myArr[i];
+            }
+
+            var arr = [
+                [1, 2], [3, 4], [5, 6]
+            ];
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr[i].length; j++) {
+                    console.log(arr[i][j]);
+                }
+            }
         });
     </script>
 </head>
